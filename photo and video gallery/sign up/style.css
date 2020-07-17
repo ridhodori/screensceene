@@ -1,0 +1,294 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+input, textarea{
+    outline: none;
+    border: none;
+}
+button{
+    outline:none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+a,a:hover{
+    text-decoration: none;
+}
+
+textarea:focus, input:focus{
+    border-color: transparent !important;
+}
+input:focus::-webkit-input-placeholder{color:transparent;}
+input:focus:-moz-placeholder{color:transparent;}
+input:focus::-moz-placeholder{color:transparent;}
+input:focus:-ms-input-placeholder{color:transparent}
+
+input::-webkit-input-placeholder{color:#ccc;}
+.container-signup{
+    width: 100%;
+    display: flex;
+}
+.another{
+    display: flex;
+    font-size: 1.5625rem;
+    margin-bottom: 2.1875rem;
+}
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 0.9375rem;
+    stroke: #9E9EA7 solid ;
+}
+.inside-line{
+    border: 0.0625rem solid #5E5E5E;
+    width: 100%;
+}
+
+.or{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.signup-more{
+    width: calc(100% - 32.5rem);
+    position: relative;
+    background-image: url(alam.jpg.jfif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.text-gunung{
+    position: absolute;
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 64px;
+    bottom: 3.2cm;
+    left: 1.3cm;
+    text-align: left;
+    
+}
+.text-gunung2{
+    color:white;
+    font-weight: bold;
+    font-size: 96px;
+    font-family: 'Raleway', sans-serif; 
+    text-align: left;   
+}
+.title{
+    color:white;
+    font-weight: normal;
+    font-size: 32px;
+    font-family: 'Archivo', sans-serif;;
+    text-align: left;
+}
+.wrap-signup{
+    width:53.125rem;
+    min-height: 100vh;
+    background: #ffffff;
+    border-radius: 0.125rem;
+    position: relative;
+    padding: 4.5rem 3.125rem 0rem 3.125rem;
+}
+
+.signup-form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.signup-form-title{
+    display: block;
+    width: 100%;
+    font-size: 40px;
+    font-family: 'Archivo', sans-serif;
+    color : #323643;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 3.6875rem;
+}
+.subtitle{
+    font-size: 24px;
+}
+.wrap-input{
+    width: 100%;
+    position: relative;
+    border-bottom: 0.125rem solid #dbdbdb;
+    font-family: 'Archivo', sans-serif;
+    margin-bottom: 3.125rem;
+}
+.lable-input{
+    font-size: 18px;
+    font-size: 600;
+    color: #999999;
+    line-height: 1.2;
+    padding-left:0.125rem;
+}
+.input{
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    font-size: 22px;
+    line-height: 1,2;
+    padding: 0rem 0.125rem;
+}
+.focus-input{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.focus-input::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.125rem;
+    left: 0px;
+    width: 0;
+    height: 0.125rem;
+    -webkit-transition: all 0.4s;
+    -o-transition:all 0.4s ;
+    -moz-transition:all 0.4s;
+    background: #d5007d;
+}
+
+.input:focus+ .focus-input::before{
+    width: 100%;
+
+}
+
+
+.txt2{
+    font-size: 15px;
+    line-height: 1.4; 
+    color: #666;
+} 
+.label-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 2.1875rem;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 1.4; 
+    color: #666;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .label-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .txt1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5625rem;
+    width: 1.5625rem;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .label-checkbox:hover input ~ .txt1 {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a white background */
+  .label-checkbox input:checked ~ .txt1 {
+    background-color: #ccc;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .txt1:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .label-checkbox input:checked ~ .txt1:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .label-checkbox .txt1:after {
+    left: 0.5625rem;
+    top: 0.3125rem;
+    width: 0.3125rem;
+    height: 0.625rem;
+    border: solid #2196f3;
+    border-width: 0rem 0.1875rem 0.1875rem 0rem;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+.hov:hover{
+    color: #00b1ff;
+}
+
+.possition-btn{
+    display: flex;
+    justify-content: center;
+}
+.containainer-signup-form-btn{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrap-signup-form-btn{
+    display: block;
+    position: relative;
+    padding-bottom: 0.625rem;
+}
+.signup-form-btn{
+    width: 15.3125rem;
+    height: 3.125rem;
+    padding: 0.625rem 1.875rem;
+    background: #00b1ff;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.login-button{
+    font-size:18px;
+    color: #666;
+    text-decoration: none;
+}
+.text-end{
+    position: absolute;
+    font-size: 20px;
+    display: flex;
+    text-align:center;
+    font-family: 'Raleway', sans-serif;
+    color: #323643;
+}
+.blue-text{
+    color: #00bbf0;
+    padding-left: 5px;
+}
